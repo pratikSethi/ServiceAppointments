@@ -1,0 +1,62 @@
+#html{
+    height: 100%;
+}
+
+#body{
+    height: 100%;
+    background-color: gainsboro;
+}
+
+
+.container-fluid {
+    height: 100%;
+    overflow-y: hidden; /* don't show content that exceeds my height */
+}
+
+#my-nav-container-div{
+    position: relative;
+
+    margin: 2%;
+}
+
+.my-logout-btn{
+    margin-top: 6.67%;
+    margin-right: 6.67%;
+}
+
+.my-main-container-fluid-div{
+    margin-top: 2%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+.my-footer-container-div{
+    position: fixed;
+    height: 10%;
+    background-color: gainsboro;
+}
+
+.my-right-col{
+    position: relative;
+    background-color: gainsboro;
+    height: 100%;
+}
+
+.my-left-col{
+    position: relative;
+    background-color: gainsboro;
+    height: 100%;
+}
+
+.my-row{
+    margin-top: 2%;
+
+}
+
+#my-footer-nav-container{
+    background-color: #4cae4c;
+}
+
+.my-table-div{
+}

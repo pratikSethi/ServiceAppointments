@@ -1,0 +1,87 @@
+<html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script src="functions.js"></script>
+<script src="jquery-3.1.0.js"></script>
+<script>
+   function checkPassword () {
+
+            var password = $("#password").val();
+            var confirmPassword = $("#ponfirmPassword").val();
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+</script>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid" >
+        <div class="navbar-header">
+            <a class="navbar-brand">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <form class="navbar-form navbar-right" name="getCustomer" >
+            <div class="form-group">
+                <div style="color: white;" id="loginstatus"></div>
+                <input type="text" class="form-control" name="email" placeholder="UserName">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <input type="button" class="btn btn-default" value="Login" onclick="login();" method="post">Login</input>
+        </form>
+
+    </div>
+</nav>
+
+<div class="container-fluid cf">
+    <div class="row">
+        <div class="col-sm-8 leftside">
+            <div class="panel panel-default">
+                <div class="panel-heading">To save your time, you can book service online with us, Please register for Online service
+                    booking.</div>
+            </div>
+            <img class="img-responsive" src="Lighthouse.jpg" alt="Lighthouse">
+
+        </div>
+        <div class="col-sm-4 rightside" ng-controller="register">
+
+            <div class="form-group">
+                <form name="addCustomer" method="post">
+                <h2><br><br>Register</h2>
+                    <div style="color: red;" id="registerStatus"></div>
+                <input type="text" name="name"class="form-control" placeholder="Name" required><br>
+                <input type="email" name="email"class="form-control" placeholder="Email" required><br>
+                <input type="password" name="password"class="form-control" placeholder="Password" required><br>
+                    <input type="password" name="confirmpassword"class="form-control" placeholder="ConfirmPassword" onchange="checkPassword();" required><br>
+                <input type="number" name="phoneNo" class="form-control" placeholder="ContactNumber" minlength="10" required><br>
+                <input type="text" name="address" class="form-control" placeholder="Address" required><br>
+                <input type="text" name="city" class="form-control" placeholder="City" required><br>
+                <input type="text" name="state" class="form-control" placeholder="State" required><br>
+                <input type="number" name="postalCode" class="form-control" placeholder="PostalCode" maxlength="6" minlength="6" required><br>
+
+                <button id="registerbtn" type="button" class="btn btn-primary" onclick="register();">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom"></nav>
+</body>
+</html>
+

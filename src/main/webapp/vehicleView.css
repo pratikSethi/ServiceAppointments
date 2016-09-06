@@ -1,0 +1,64 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: gainsboro;
+}
+
+
+.my-logout-btn{
+    margin-top: 6.67%;
+    margin-right: 6.67%;
+}
+
+.my-row-div{
+    margin-top: 3%;
+    position: relative;
+    height: 100%;
+}
+
+#my-nav-container-div{
+    position: relative;
+    margin: 2%;
+}
+
+.my-form-class{
+    margin: 5%;
+}
+
+.my-button-class{
+    margin: 5%;
+    position: relative;
+    height: 100%;
+}
+
+.view-vehicles-button{
+    margin-bottom: 3%;
+}
+
+.my-left-col{
+    height: 100%;
+    position: relative;
+    /*background-color: #d43f3a;*/
+    background-color: gainsboro;
+    margin-top: 10%;
+}
+.my-col-row{
+    height:100%;
+    position: relative;
+}
+
+.my-right-col{
+    height: 100%;
+    position: relative;
+    /*background-color: #5bc0de;*/
+    background-color: gainsboro;
+    margin-top: 7%;
+}
+
+.my-add-vehicle-form{
+    margin-top: 5%;
+    visibility: hidden;
+
+}

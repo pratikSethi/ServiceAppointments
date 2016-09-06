@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookAppointment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="vehicleView.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-3.1.0.js"></script>
+    <script src="vehicle.js"></script>
+    <script>
+        function addVehicle() {
+            //console.log(document.getElementsByClassName("my-add-vehicle-form").length)
+            document.getElementsByClassName("my-add-vehicle-form")[0].style.visibility = "visible";
+            // do set inner html to whatever you wanna show
+        }
+
+        function viewVehicles() {
+
+            document.getElementsByClassName("my-add-vehicle-form")[0].style.visibility = "hidden";
+            showRecords();
+        }
+
+        function checkAvailability(){
+            document.getElementsByClassName("my-add-vehicle-form")[0].style.visibility = "hidden";
+            document.getElementById("showData").innerHTML = "<label>Check Availability<input type='Date' id='checkAvailable' placeholder='Click here'></label>"+
+                    "<button type='button' name='checkAvailable' onclick='checkAvailable();'>Check Availability</button>";
+        }
+    </script>
+</head>
+<body>
+
+<div id="my-nav-container-div">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid ">
+            <div class="navbar-header">
+                <a class="navbar-brand">WebSiteName</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">AboutUs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+
+            <div class ="navbar-right container-fluid my-logout-btn-div">
+                <button type="button" class="btn btn-default my-logout-btn" onclick="logout();">
+                    <span class="glyphicon glyphicon-log-out"></span> Log out
+                </button>
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid my-row-div">
+
+    <div class="row my-col-row">
+        <div class="col-sm-2 my-left-col">
+            <!--<h3>Options</h3>-->
+
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active" style="margin-top: 10%"><a onclick="viewVehicles();">
+                   View Vehicles</a></li>
+                <li class="active" style="margin-top: 10%"><a onclick="addVehicle();">
+                    Add Vehicle</a></li>
+                <li class="active" style="margin-top: 10%"><a onclick="checkAvailability()">
+                    Check Availability</a></li>
+            </ul>
+
+        </div>
+
+        <div class="col-sm-10 my-right-col" >
+            <div id="showData"></div>
+
+            <form name="vehicleForm" id="vehicleForm"  method="post" class="my-add-vehicle-form">
+                <h2>Vehicle Details</h2>
+                <input type="number" class="form-control" placeholder="VIN"><br>
+                <input type="text" class="form-control" placeholder="Model"><br>
+                <input type="text" class="form-control" placeholder="Company"><br>
+                <input type="date" class="form-control" placeholder="Date-Of-Purchase"><br>
+
+                <button type="button" id="add-button-id" class="btn btn-primary"
+                        onclick="addRecord()" style="margin-bottom: 2.5%">Add</button>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div id="my-footer-nav-container" style="position: relative">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom"></nav>
+</div>
+
+</body>
+</html>
